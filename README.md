@@ -1,7 +1,5 @@
-# Welcome to streamlit
+# Noteのトレンド記事を解析する 
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
-
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+# 参考にした記事
+https://zenn.dev/enterrocken/articles/2aaab79961e386
