@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from abc import ABC, abstractmethod
 import requests
 import pandas as pd
 import json
