@@ -1,15 +1,13 @@
 import pytest
 
-from services.article_data_processer import fetch_trend_articles
+from src.services.article_data_processor import NoteApiDataFetcher
 
 
-class TestArticleDataProcesser:
+class TestNoteApiDaFetcher:
     def test_動作チェック(self):
-        assert False
-
-    def test_動作チェック2(self):
         assert True
 
-    def test_apiから記事データを取得できる(self):
-        df = fetch_trend_articles("https://note.com/api/v3/notes")
+    def test_apiから記事データを取得できる():
+        note_api_data_fetcher = NoteApiDataFetcher("https://note.com/api/v3/notes")
+        df = note_api_data_fetcher.fetch_data()
         assert df is not None
