@@ -20,7 +20,7 @@ class NoteApiDataFetcher(DataFetcher):
     def __init__(self, api_url: str):
         self.api_url = api_url
 
-    def fetch_data(self):
+    def fetch_data(self) -> pd.DataFrame:
         try:
             response = requests.get(self.api_url)
             response.raise_for_status()
