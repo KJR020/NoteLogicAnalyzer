@@ -1,11 +1,9 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 from abc import ABC, abstractmethod
 import requests
 import pandas as pd
 import json
 
+from logger import setup_logger
 
 CONTENTS_API_URL = "https://note.com/api/v3/notes"
 
