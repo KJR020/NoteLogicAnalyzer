@@ -12,4 +12,5 @@ class TestNoteApiDaFetcher:
             api_url="https://note.com/api/v3/notes"
         )
         df = note_api_data_fetcher.fetch_data()
-        assert df is not None
+        assert df is not None, "DataFrame is None"
+        assert not df.empty, "DataFrame is empty"
