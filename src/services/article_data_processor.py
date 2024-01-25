@@ -6,6 +6,10 @@ import json
 from logger import setup_logger
 
 
+# Set up logger
+logger = setup_logger("article_data_processor_logger", "article_data_processor.log")
+
+
 class DataFetcher(ABC):
     @abstractmethod
     def fetch_data(self) -> pd.DataFrame:
