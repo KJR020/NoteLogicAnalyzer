@@ -5,8 +5,6 @@ import json
 
 from logger import setup_logger
 
-CONTENTS_API_URL = "https://note.com/api/v3/notes"
-
 
 class DataFetcher(ABC):
     @abstractmethod
@@ -15,6 +13,8 @@ class DataFetcher(ABC):
 
 
 class NoteApiDataFetcher(DataFetcher):
+    CONTENTS_API_URL = "https://note.com/api/v3/notes"
+
     def __init__(self, api_url: str):
         self.api_url = api_url
 
