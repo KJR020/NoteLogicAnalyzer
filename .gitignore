@@ -54,3 +54,4 @@ lib/Pipfile.lock
 # VSCode
 ########################################################################
 .vscode/
+article_data_processor.log
