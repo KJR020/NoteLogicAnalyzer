@@ -15,7 +15,15 @@
 import streamlit as st
 from streamlit.logger import get_logger
 
+from services.article_data_processor import NoteApiDataFetcher
+
 LOGGER = get_logger(__name__)
+
+ARTICLE_DATA_PROCESSOR = NoteApiDataFetcher()
+
+
+def initial_fetch_articles():
+    return df
 
 
 def run():
@@ -23,6 +31,8 @@ def run():
         page_title="Hello",
         page_icon="👋",
     )
+
+    df_trend_articles = ARTICLE_DATA_PROCESSOR.fetch_data()
 
     st.write("# デモアプリです")
 
@@ -32,10 +42,10 @@ def run():
         """
         Noteのトレンド記事をAPIから取得し、
         分析してみました.
-        
-        menuから選択してください。
         """
     )
+
+    st.table(df_trend_articles.loc[:, ["name", "publish_at", "user", "like_count"]])
 
 
 if __name__ == "__main__":

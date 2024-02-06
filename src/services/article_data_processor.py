@@ -17,10 +17,9 @@ class DataFetcher(ABC):
 
 
 class NoteApiDataFetcher(DataFetcher):
-    CONTENTS_API_URL = "https://note.com/api/v3/notes"
 
-    def __init__(self, api_url: str):
-        self.api_url = api_url
+    def __init__(self):
+        self.api_url = "https://note.com/api/v3/notes"
 
     def fetch_data(self) -> pd.DataFrame:
         try:
